@@ -110,7 +110,7 @@ exports[`AccountDetails renders unitag without error 1`] = `
     numberOfLines={1}
     style={
       {
-        "color": "#FC72FF",
+        "color": "#333350",
         "flexShrink": 1,
         "fontFamily": "Basel-Book",
         "fontSize": 17,

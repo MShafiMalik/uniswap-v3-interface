@@ -286,8 +286,8 @@ exports[`PoolDetailsPage pool header is displayed when data is received from the
   cursor: pointer;
   -webkit-transition-duration: 125ms;
   transition-duration: 125ms;
-  color: #FC72FF;
-  stroke: #FC72FF;
+  color: #333350;
+  stroke: #333350;
   font-weight: 500;
 }
 
@@ -1113,7 +1113,7 @@ exports[`PoolDetailsPage pool header is displayed when data is received from the
 .c124 {
   height: 8px;
   width: 40.698463777008904%;
-  background: #FC72FF;
+  background: #333350;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border-right: 1px solid #F9F9F9;
@@ -1217,7 +1217,7 @@ exports[`PoolDetailsPage pool header is displayed when data is received from the
 
 .c113 {
   background-color: #FFEFFF;
-  color: #FC72FF;
+  color: #333350;
   font-size: 20px;
   font-weight: 535;
 }
@@ -1307,7 +1307,7 @@ exports[`PoolDetailsPage pool header is displayed when data is received from the
 }
 
 .c65 path {
-  stroke: #FC72FF;
+  stroke: #333350;
   background: #7D7D7D;
   fill: none;
 }
@@ -1655,8 +1655,8 @@ exports[`PoolDetailsPage pool header is displayed when data is received from the
   border-radius: 900px;
   width: 50%;
   gap: 8px;
-  color: #FC72FF;
-  background-color: #FC72FF1f;
+  color: #333350;
+  background-color: #3333501f;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1679,7 +1679,7 @@ exports[`PoolDetailsPage pool header is displayed when data is received from the
 }
 
 .c70 {
-  fill: #FC72FF;
+  fill: #333350;
   rotate: 90deg;
 }
 
@@ -1766,7 +1766,7 @@ exports[`PoolDetailsPage pool header is displayed when data is received from the
   width: -moz-fit-content;
   width: fit-content;
   padding: 8px;
-  color: #FC72FF;
+  color: #333350;
   font-size: 16px;
   font-weight: 535;
   gap: 8px;
@@ -5025,7 +5025,7 @@ exports[`PoolDetailsPage pool header is displayed when data is received from the
                   <svg
                     class="c65 c66"
                     fill="none"
-                    stroke="#FC72FF"
+                    stroke="#333350"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >

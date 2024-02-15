@@ -60,7 +60,7 @@ const CurrencySelect = styled(ButtonGray)<{
   pointerEvents?: string
 }>`
   align-items: center;
-  background-color: ${({ selected, theme }) => (selected ? theme.surface1 : theme.accent1)};
+  /* background-color: ${({ selected, theme }) => (selected ? theme.surface1 : theme.accent1)}; */
   opacity: ${({ disabled }) => (!disabled ? 1 : 0.4)};
   box-shadow: ${({ theme }) => theme.deprecated_shallowShadow};
   color: ${({ selected, theme }) => (selected ? theme.neutral1 : theme.white)};
@@ -78,7 +78,7 @@ const CurrencySelect = styled(ButtonGray)<{
   margin-left: ${({ hideInput }) => (hideInput ? '0' : '12px')};
   :focus,
   :hover {
-    background-color: ${({ selected, theme }) => (selected ? theme.surface2 : darken(0.05, theme.accent1))};
+    /* background-color: ${({ selected, theme }) => (selected ? theme.surface2 : darken(0.05, theme.accent1))}; */
   }
   visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')};
   ${({ pointerEvents }) => pointerEvents && `pointer-events: none`}

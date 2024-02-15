@@ -56,6 +56,8 @@ const Container = styled.div<{ hideInput: boolean }>`
   width: ${({ hideInput }) => (hideInput ? '100%' : 'initial')};
 `
 
+// background: ;
+
 const CurrencySelect = styled(ButtonGray)<{
   visible: boolean
   selected: boolean
@@ -63,8 +65,9 @@ const CurrencySelect = styled(ButtonGray)<{
   disabled?: boolean
   animateShake?: boolean
 }>`
+
   align-items: center;
-  background-color: ${({ selected, theme }) => (selected ? theme.surface1 : theme.accent1)};
+  background-color: ${({ selected, theme }) => (selected ? "theme.surface1" : "#6E42CA")};
   opacity: ${({ disabled }) => (!disabled ? 1 : 0.4)};
   color: ${({ selected, theme }) => (selected ? theme.neutral1 : theme.white)};
   cursor: pointer;
@@ -72,7 +75,7 @@ const CurrencySelect = styled(ButtonGray)<{
   border-radius: 18px;
   outline: none;
   user-select: none;
-  border: 1px solid ${({ selected, theme }) => (selected ? theme.surface3 : theme.accent1)};
+  border: 1px solid ${({ selected, theme }) => (selected ? theme.surface3 : "#6E42CA")};
   font-size: 24px;
   font-weight: 485;
   width: ${({ hideInput }) => (hideInput ? '100%' : 'initial')};
@@ -84,7 +87,7 @@ const CurrencySelect = styled(ButtonGray)<{
 
   &:hover,
   &:active {
-    background-color: ${({ theme, selected }) => (selected ? theme.surface2 : theme.accent1)};
+    background-color: ${({ theme, selected }) => (selected ? theme.surface2 : "#6E42CA")};
   }
 
   &:before {

@@ -135,14 +135,9 @@ export const routingApi = createApi({
             configs: getRoutingAPIConfig(args),
           }
 
-          const baseURL = gatewayDNSUpdateEnabled ? UNISWAP_GATEWAY_DNS_URL : UNISWAP_API_URL
-          const response = await fetch({
-            method: 'POST',
-            url: `${baseURL}/quote`,
-            body: JSON.stringify(requestBody),
-            headers: {
-              'x-request-source': 'uniswap-web',
-            },
+          let response = await fetch({
+            method: 'GET',
+            url: `https://q80a8rx8l9.execute-api.eu-west-1.amazonaws.com/prod/quote?tokenInAddress=${tokenIn}&tokenInChainId=${tokenInChainId}&tokenOutAddress=${tokenOut}&tokenOutChainId=${tokenOutChainId}&amount=${amount}&type=exactIn`,
           })
 
           if (response.error) {
@@ -168,7 +163,13 @@ export const routingApi = createApi({
             }
           }
 
-          const uraQuoteResponse = response.data as URAQuoteResponse
+          const quoteResponse = {
+            quote : response.data,
+            allQuotes : [response.data],
+            routing :  URAQuoteType.CLASSIC
+          };
+
+          const uraQuoteResponse = quoteResponse as URAQuoteResponse;
           const tradeResult = await transformQuoteToTrade(args, uraQuoteResponse, QuoteMethod.ROUTING_API)
           return { data: { ...tradeResult, latencyMs: getQuoteLatencyMeasure(quoteStartMark).duration } }
         } catch (error: any) {

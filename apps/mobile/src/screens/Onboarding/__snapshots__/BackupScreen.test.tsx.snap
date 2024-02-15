@@ -221,7 +221,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                     style={
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FC72FF1f",
+                        "backgroundColor": "#3333501f",
                         "borderBottomLeftRadius": 999999,
                         "borderBottomRightRadius": 999999,
                         "borderTopLeftRadius": 999999,
@@ -254,7 +254,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                             "borderWidth": 0,
                           },
                           {
-                            "color": "#FC72FF",
+                            "color": "#333350",
                             "height": 16,
                             "width": 16,
                           },
@@ -265,7 +265,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                           },
                         ]
                       }
-                      tintColor="#FC72FF"
+                      tintColor="#333350"
                       vbHeight={24}
                       vbWidth={24}
                     >
@@ -432,7 +432,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                     style={
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FC72FF1f",
+                        "backgroundColor": "#3333501f",
                         "borderBottomLeftRadius": 999999,
                         "borderBottomRightRadius": 999999,
                         "borderTopLeftRadius": 999999,
@@ -449,7 +449,7 @@ exports[`BackupScreen renders backup options when none are completed 1`] = `
                     }
                   >
                     <svg
-                      color="#FC72FF"
+                      color="#333350"
                       data-file-name="SvgPaperStack"
                       height={16}
                     />
@@ -948,7 +948,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                     style={
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FC72FF1f",
+                        "backgroundColor": "#3333501f",
                         "borderBottomLeftRadius": 999999,
                         "borderBottomRightRadius": 999999,
                         "borderTopLeftRadius": 999999,
@@ -981,7 +981,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                             "borderWidth": 0,
                           },
                           {
-                            "color": "#FC72FF",
+                            "color": "#333350",
                             "height": 16,
                             "width": 16,
                           },
@@ -992,7 +992,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                           },
                         ]
                       }
-                      tintColor="#FC72FF"
+                      tintColor="#333350"
                       vbHeight={24}
                       vbWidth={24}
                     >
@@ -1159,7 +1159,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                     style={
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FC72FF1f",
+                        "backgroundColor": "#3333501f",
                         "borderBottomLeftRadius": 999999,
                         "borderBottomRightRadius": 999999,
                         "borderTopLeftRadius": 999999,
@@ -1176,7 +1176,7 @@ exports[`BackupScreen renders backup options when some are completed 1`] = `
                     }
                   >
                     <svg
-                      color="#FC72FF"
+                      color="#333350"
                       data-file-name="SvgPaperStack"
                       height={16}
                     />

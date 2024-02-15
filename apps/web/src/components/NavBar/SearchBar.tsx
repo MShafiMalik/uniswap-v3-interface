@@ -28,7 +28,7 @@ import * as styles from './SearchBar.css'
 import { SearchBarDropdown } from './SearchBarDropdown'
 
 const KeyShortCut = styled.div`
-  background-color: ${({ theme }) => theme.surface3};
+  background-color: ${({ theme }) => "theme.surface3"};
   color: ${({ theme }) => theme.neutral2};
   padding: 0px 8px;
   width: 20px;
@@ -141,6 +141,7 @@ export const SearchBar = () => {
   return (
     <Trace section={InterfaceSectionName.NAVBAR_SEARCH}>
       <Column
+        
         data-cy="search-bar"
         position={{ sm: 'fixed', md: 'absolute' }}
         width={{ sm: isOpen ? 'viewWidth' : 'auto', md: 'auto' }}

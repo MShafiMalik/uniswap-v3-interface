@@ -83,7 +83,7 @@ export const colors = {
   blueVibrant: '#587BFF',
   // TODO: add magenta 50-900
   magenta300: '#FD82FF',
-  magentaVibrant: '#FC72FF',
+  magentaVibrant: '#FFFFFF',
   purple300: '#8440F2',
   purple900: '#1C0337',
   purpleVibrant: '#6100FF',
@@ -106,8 +106,8 @@ export const colors = {
   surface3_dark: '#FFFFFF12',
   surface4_dark: '#FFFFFF20',
   surface5_dark: '#00000004',
-  accent1_dark: '#FC72FF',
-  accent2_dark: '#311C31',
+  accent1_dark: '#FFFFFF',
+  accent2_dark: '#6E42CA',
   accent3_dark: '#4C82FB',
   neutral1_light: '#222222',
   neutral2_light: '#7D7D7D',
@@ -117,7 +117,7 @@ export const colors = {
   surface3_light: '#22222212',
   surface4_light: '#FFFFFF64',
   surface5_light: '#00000004',
-  accent1_light: '#FC72FF',
+  accent1_light: '#FFFFFF',
   accent2_light: '#FFEFFF',
   accent3_light: '#4C82FB',
   success: '#40B66B',
@@ -152,7 +152,7 @@ const commonTheme = {
   chain_56_background: colors.networkBsc,
   promotional: colors.magenta300,
 
-  brandedGradient: 'linear-gradient(139.57deg, #FF79C9 4.35%, #FFB8E2 96.44%);',
+  brandedGradient: '#28253E',
   promotionalGradient: colors.accent1_light,
 }
 
@@ -184,18 +184,18 @@ export const lightTheme: ThemeColors = {
 
   background: colors.white,
 
-  neutral1: colors.neutral1_light,
-  neutral2: colors.neutral2_light,
+  neutral1: "#FFFFFF",
+  neutral2: "#ffefef66",
   neutral3: colors.neutral3_light,
 
-  surface1: colors.surface1_light,
-  surface2: colors.surface2_light,
-  surface3: colors.surface3_light,
+  surface1: "#14142F",
+  surface2: "#333350",
+  surface3: "#333350",
   surface4: colors.surface4_light,
   surface5: colors.surface5_light,
 
-  accent1: colors.accent1_light,
-  accent2: colors.accent2_light,
+  accent1: "#FFFFFF",
+  accent2:"#6E42CA",
   accent3: colors.accent3_light,
 
   success: colors.success,

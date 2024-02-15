@@ -141,6 +141,12 @@ const ResponsiveButtonConfirmed = styled(ButtonConfirmed)`
   padding: 6px 8px;
   width: fit-content;
   font-size: 16px;
+  background: #6E42CA;
+
+  :hover {
+    background: #6d42caba;
+  }
+
 
   @media only screen and (max-width: ${({ theme }) => `${theme.breakpoint.md}px`}) {
     width: fit-content;

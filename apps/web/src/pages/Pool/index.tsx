@@ -119,6 +119,12 @@ const ResponsiveButtonPrimary = styled(ButtonPrimary)`
   border-radius: 12px;
   font-size: 16px;
   padding: 6px 8px;
+  background-color: #6E42CA;
+
+  :hover {
+    background-color: #6d42cab7;
+  }
+
   width: fit-content;
   @media (max-width: ${({ theme }) => `${theme.breakpoint.sm}px`}) {
     flex: 1 1 auto;
