@@ -36,6 +36,7 @@ FILES=(
 "node_modules/@uniswap/universal-router-sdk/dist/universal-router-sdk.cjs.development.js"
 "node_modules/@uniswap/universal-router-sdk/dist/universal-router-sdk.esm.js"
 "node_modules/@uniswap/universal-router-sdk/dist/universal-router-sdk.cjs.development.js.map"
+"./node_modules/@uniswap/universal-router-sdk/dist/universal-router-sdk.cjs.production.min.js"
 "node_modules/@uniswap/universal-router-sdk/dist/universal-router-sdk.cjs.production.min.js.map"
 "node_modules/@uniswap/universal-router-sdk/dist/universal-router-sdk.esm.js.map"
 "node_modules/@uniswap/sdk-core/dist/sdk-core.cjs.development.js"

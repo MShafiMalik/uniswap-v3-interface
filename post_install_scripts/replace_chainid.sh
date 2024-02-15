@@ -9,7 +9,6 @@ source "${PWD}/post_install_scripts/files_containing_chainIds.sh"
 escape_special_chars() {
     echo "$1" | sed 's/[^^]/[&]/g; s/\^/\\^/g'
 }
-
 PATTERN_1_="'10': { isActive"
 PATTERN_2_="chainId: 10,"
 PATTERN_3_="chain_10"
@@ -28,6 +27,15 @@ PATTERN_15_="case 10:"
 PATTERN_16_="chainId:10"
 PATTERN_17_="id: 10,"
 PATTERN_18_="NUMBER_10"
+PATTERN_19_="networkId: 10,"
+PATTERN_20_="WEB3_RPC_10"
+PATTERN_21_="JSON_RPC_PROVIDER_10"
+PATTERN_23_="OPTIMISM = 10]"
+PATTERN_24_="[10]: new Token(10,"
+PATTERN_25_="pe[10] = new le(10,"
+PATTERN_26_="[10]={"
+PATTERN_27_="10: '0"
+PATTERN_28_="10:\"0"
 
 PATTERN_1="'11155420': { isActive"
 PATTERN_2="chainId: 11155420,"
@@ -47,7 +55,15 @@ PATTERN_15="case 11155420:"
 PATTERN_16="chainId:11155420"
 PATTERN_17="id: 11155420,"
 PATTERN_18="NUMBER_11155420"
-
+PATTERN_19="networkId: 11155420,"
+PATTERN_20="WEB3_RPC_11155420"
+PATTERN_21="JSON_RPC_PROVIDER_11155420"
+PATTERN_23="OPTIMISM = 11155420]"
+PATTERN_24="[11155420]: new Token(11155420,"
+PATTERN_25="pe[11155420] = new le(11155420,"
+PATTERN_26="[11155420]={"
+PATTERN_27="11155420: '0"
+PATTERN_28="11155420:\"0"
 
 for FILE in "${FILES[@]}"; do
     sed -i \
@@ -69,6 +85,15 @@ for FILE in "${FILES[@]}"; do
     -e "s|$(escape_special_chars "$PATTERN_16_")|$PATTERN_16|gi" \
     -e "s|$(escape_special_chars "$PATTERN_17_")|$PATTERN_17|gi" \
     -e "s|$(escape_special_chars "$PATTERN_18_")|$PATTERN_18|gi" \
+    -e "s|$(escape_special_chars "$PATTERN_19_")|$PATTERN_19|gi" \
+    -e "s|$(escape_special_chars "$PATTERN_20_")|$PATTERN_20|gi" \
+    -e "s|$(escape_special_chars "$PATTERN_21_")|$PATTERN_21|gi" \
+    -e "s|$(escape_special_chars "$PATTERN_23_")|$PATTERN_23|gi" \
+    -e "s|$(escape_special_chars "$PATTERN_24_")|$PATTERN_24|gi" \
+    -e "s|$(escape_special_chars "$PATTERN_25_")|$PATTERN_25|gi" \
+    -e "s|$(escape_special_chars "$PATTERN_26_")|$PATTERN_26|gi" \
+    -e "s|$(escape_special_chars "$PATTERN_27_")|$PATTERN_27|gi" \
+    -e "s|$(escape_special_chars "$PATTERN_28_")|$PATTERN_28|gi" \
     "$FILE"
 done
 
