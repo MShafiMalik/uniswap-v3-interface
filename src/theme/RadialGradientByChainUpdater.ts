@@ -38,8 +38,8 @@ export default function RadialGradientByChainUpdater(): null {
     switch (chainId) {
       case SupportedChainId.OPTIMISM:
         setBackground(backgroundResetStyles)
-        const optimismLightGradient = 'radial-gradient(150% 100% at 50% 0%, #FFFBF2 2%, #FFF4F9 53%, #FFFFFF 100%)'
-        const optimismDarkGradient = 'radial-gradient(150% 100% at 50% 0%, #3E2E38 2%, #2C1F2D 53%, #1F2128 100%)'
+        const optimismLightGradient = '#e6f2ff'
+        const optimismDarkGradient = '#28253E'
         backgroundRadialGradientElement.style.background = darkMode ? optimismDarkGradient : optimismLightGradient
         break
       default:
