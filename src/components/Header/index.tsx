@@ -268,7 +268,7 @@ export default function Header() {
   const {
     infoLink,
     nativeCurrency: { symbol: nativeCurrencySymbol },
-  } = CHAIN_INFO[!chainId || !chainAllowed ? SupportedChainId.MAINNET : chainId]
+  } = CHAIN_INFO[!chainId || !chainAllowed ? SupportedChainId.OPTIMISM : chainId]
 
   return (
     <HeaderFrame showBackground={scrollY > 45}>
@@ -296,7 +296,7 @@ export default function Header() {
         >
           <Trans>Pool</Trans>
         </StyledNavLink>
-        {(!chainId || chainId === SupportedChainId.MAINNET) && (
+        {(!chainId || chainId === SupportedChainId.OPTIMISM) && (
           <StyledNavLink id={`vote-nav-link`} to={'/vote'}>
             <Trans>Vote</Trans>
           </StyledNavLink>

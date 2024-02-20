@@ -31,6 +31,7 @@ V3_MIGRATOR_ADDRESS_="0xA5644E29708357803b5A882D272c41cC0dF92B34"
 TICK_LENS_ADDRESS_="0xbfd8137f7d1516D3ea5cA83523914859ec47F573"
 SUBGRAPH_URL_="https://api.thegraph.com/subgraphs/name/ianlapham/optimism-post-regenesis"
 RPC_URL_="https://mainnet.optimism.io"
+SOURCE_MAP_PATTERN_="let mappingsWasmUrl = null"
 
 # ADDRESSES TO REPLACE WITH
 WETH_ADDRESS="0x8A7B847852f70c31B240D3E5aA2a1a8506C95494"
@@ -49,6 +50,7 @@ V3_MIGRATOR_ADDRESS="0xBAa2C66A481d5D7bD57c38d8d05DCB4C2677eCef"
 TICK_LENS_ADDRESS="0x8f7384301CFE3282cbDC954B94B886A714B52DE4"
 SUBGRAPH_URL="http://3.248.145.201:8000/subgraphs/name/ianlapham/uniswap-v3"
 RPC_URL="https://sepolia.optimism.io/"
+SOURCE_MAP_PATTERN="let mappingsWasmUrl = \"https://unpkg.com/source-map@0.7.3/lib/mappings.wasm\""
 
 for FILE in "${FILES[@]}"; do
     sed -i \
@@ -72,6 +74,7 @@ for FILE in "${FILES[@]}"; do
     -e "s|$(escape_special_chars "$TICK_LENS_ADDRESS_")|$TICK_LENS_ADDRESS|gi" \
     -e "s|$(escape_special_chars "$SUBGRAPH_URL_")|$SUBGRAPH_URL|gi" \
     -e "s|$(escape_special_chars "$RPC_URL_")|$RPC_URL|gi" \
+    -e "s|$(escape_special_chars "$SOURCE_MAP_PATTERN_")|$SOURCE_MAP_PATTERN|gi" \
     "$FILE"
 done
 

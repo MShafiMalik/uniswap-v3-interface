@@ -19,6 +19,7 @@ FILES=(
     "./node_modules/@uniswap/v3-sdk/dist/v3-sdk.cjs.production.min.js.map"
     "./node_modules/@uniswap/v3-sdk/dist/v3-sdk.esm.js"
     "./node_modules/@uniswap/v3-sdk/dist/v3-sdk.esm.js.map"
+    "./node_modules/workbox-build/node_modules/source-map/lib/read-wasm.js"
     "./src/constants/addresses.ts"
     "./src/constants/tokens.ts"
     "./src/state/data/slice.ts"

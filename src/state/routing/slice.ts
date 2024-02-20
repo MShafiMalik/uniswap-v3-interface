@@ -15,6 +15,7 @@ function getRouterProvider(chainId: ChainId): BaseProvider {
   if (provider) return provider
 
   if (AUTO_ROUTER_SUPPORTED_CHAINS.includes(chainId)) {
+    // @ts-ignore
     const provider = new JsonRpcProvider(INFURA_NETWORK_URLS[chainId])
     routerProviders.set(chainId, provider)
     return provider

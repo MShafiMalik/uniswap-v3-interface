@@ -10,7 +10,6 @@ import { useAppSelector } from 'state/hooks'
 import styled, { css } from 'styled-components/macro'
 import { isChainAllowed } from 'utils/switchChain'
 
-import { useHasSocks } from '../../hooks/useSocksBalance'
 import { useWalletModalToggle } from '../../state/application/hooks'
 import { isTransactionRecent, useAllTransactions } from '../../state/transactions/hooks'
 import { TransactionDetails } from '../../state/transactions/types'
@@ -156,7 +155,6 @@ function Web3StatusInner() {
   const pending = sortedRecentTransactions.filter((tx) => !tx.receipt).map((tx) => tx.hash)
 
   const hasPendingTransactions = !!pending.length
-  const hasSocks = useHasSocks()
   const toggleWalletModal = useWalletModalToggle()
 
   if (!chainId) {
@@ -195,7 +193,6 @@ function Web3StatusInner() {
           </RowBetween>
         ) : (
           <>
-            {hasSocks ? <Sock /> : null}
             <Text>{ENSName || shortenAddress(account)}</Text>
           </>
         )}

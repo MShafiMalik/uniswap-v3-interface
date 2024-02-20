@@ -24,7 +24,6 @@ import { useSingleCallResult, useSingleContractMultipleData } from 'lib/hooks/mu
 import { useCallback, useMemo } from 'react'
 import { calculateGasMargin } from 'utils/calculateGasMargin'
 
-import { SupportedChainId } from '../../constants/chains'
 import {
   BRAVO_START_BLOCK,
   MOONBEAN_START_BLOCK,
@@ -237,10 +236,10 @@ export function useAllProposalData(): { data: ProposalData[]; loading: boolean }
   const proposalCount2 = useProposalCount(gov2)
 
   const gov0ProposalIndexes = useMemo(() => {
-    return chainId === SupportedChainId.MAINNET ? V0_PROPOSAL_IDS : countToIndices(proposalCount0)
+    return countToIndices(proposalCount0)
   }, [chainId, proposalCount0])
   const gov1ProposalIndexes = useMemo(() => {
-    return chainId === SupportedChainId.MAINNET ? V1_PROPOSAL_IDS : countToIndices(proposalCount1)
+    return countToIndices(proposalCount1)
   }, [chainId, proposalCount1])
   const gov2ProposalIndexes = useMemo(() => {
     return countToIndices(proposalCount2, 8)
@@ -338,14 +337,7 @@ export function useQuorum(governorIndex: number): CurrencyAmount<Token> | undefi
   const { chainId } = useWeb3React()
   const uni = useMemo(() => (chainId ? UNI[chainId] : undefined), [chainId])
 
-  if (
-    !latestGovernanceContract ||
-    !quorumVotes ||
-    chainId !== SupportedChainId.MAINNET ||
-    !uni ||
-    governorIndex !== LATEST_GOVERNOR_INDEX
-  )
-    return undefined
+  if (!latestGovernanceContract || !quorumVotes || !uni || governorIndex !== LATEST_GOVERNOR_INDEX) return undefined
 
   return CurrencyAmount.fromRawAmount(uni, quorumVotes)
 }

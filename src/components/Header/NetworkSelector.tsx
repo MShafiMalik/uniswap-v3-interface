@@ -149,30 +149,16 @@ const StyledChevronDown = styled(ChevronDown)`
 `
 const BridgeLabel = ({ chainId }: { chainId: SupportedChainId }) => {
   switch (chainId) {
-    case SupportedChainId.ARBITRUM_ONE:
-    case SupportedChainId.ARBITRUM_RINKEBY:
-      return <Trans>Arbitrum Bridge</Trans>
     case SupportedChainId.OPTIMISM:
-    case SupportedChainId.OPTIMISTIC_KOVAN:
       return <Trans>Optimism Bridge</Trans>
-    case SupportedChainId.POLYGON:
-    case SupportedChainId.POLYGON_MUMBAI:
-      return <Trans>Polygon Bridge</Trans>
     default:
       return <Trans>Bridge</Trans>
   }
 }
 const ExplorerLabel = ({ chainId }: { chainId: SupportedChainId }) => {
   switch (chainId) {
-    case SupportedChainId.ARBITRUM_ONE:
-    case SupportedChainId.ARBITRUM_RINKEBY:
-      return <Trans>Arbiscan</Trans>
     case SupportedChainId.OPTIMISM:
-    case SupportedChainId.OPTIMISTIC_KOVAN:
       return <Trans>Optimistic Etherscan</Trans>
-    case SupportedChainId.POLYGON:
-    case SupportedChainId.POLYGON_MUMBAI:
-      return <Trans>Polygonscan</Trans>
     default:
       return <Trans>Etherscan</Trans>
   }
@@ -258,12 +244,7 @@ const getChainNameFromId = (id: string | number) => {
   return CHAIN_IDS_TO_NAMES[id as SupportedChainId] || ''
 }
 
-const NETWORK_SELECTOR_CHAINS = [
-  SupportedChainId.MAINNET,
-  SupportedChainId.POLYGON,
-  SupportedChainId.OPTIMISM,
-  SupportedChainId.ARBITRUM_ONE,
-]
+const NETWORK_SELECTOR_CHAINS = [SupportedChainId.OPTIMISM]
 
 export default function NetworkSelector() {
   const dispatch = useAppDispatch()

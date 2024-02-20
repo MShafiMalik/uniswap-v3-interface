@@ -1,7 +1,6 @@
 import { skipToken } from '@reduxjs/toolkit/query/react'
 import { Currency } from '@uniswap/sdk-core'
 import { FeeAmount, nearestUsableTick, Pool, TICK_SPACINGS, tickToPrice } from '@uniswap/v3-sdk'
-import { SupportedChainId } from 'constants/chains'
 import { ZERO_ADDRESS } from 'constants/misc'
 import JSBI from 'jsbi'
 import { useSingleContractMultipleData } from 'lib/hooks/multicall'
@@ -14,7 +13,7 @@ import { useTickLens } from './useContract'
 import { PoolState, usePool } from './usePools'
 
 const PRICE_FIXED_DIGITS = 8
-const CHAIN_IDS_MISSING_SUBGRAPH_DATA = [SupportedChainId.ARBITRUM_ONE, SupportedChainId.ARBITRUM_RINKEBY]
+const CHAIN_IDS_MISSING_SUBGRAPH_DATA: number[] = []
 
 export interface TickData {
   tick: number
